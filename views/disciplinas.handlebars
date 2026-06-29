@@ -1,0 +1,28 @@
+
+<div class="py-2">
+    <h2 class="fw-light mb-4">Lista de disciplinas</h2>
+
+
+    <table class="table table-hover">
+        <thead>
+            <tr class="text-secondary small text-uppercase">
+                <th>Código</th>
+                <th>Matéria</th>
+                <th>Professor</th>
+                <th>Qtd. Aulas</th>
+                <th class="text-end">Faltas</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each disciplinas}}
+            <tr>
+                <td class="text-muted">{{codigo}}</td>
+                <td class="fw-semibold">{{materia}}</td>
+                <td>{{professor}}</td>
+                <td>{{qtdAulas}}</td>
+                <td class="text-end text-muted">{{faltas}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
