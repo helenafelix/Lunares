@@ -2,7 +2,7 @@ create table salas (
  id_sala int AUTO_INCREMENT PRIMARY KEY,
 sala varchar(20) not null unique key ,
 disponivel boolean not null,
-capasidade int
+capacidade int
 
 );
 create table disciplina (
@@ -28,16 +28,16 @@ Foreign Key (sala_lab)
 
 
 
-INSERT INTO salas (sala, disponivel, capasidade) VALUES ('lab 3', TRUE, 11);
-INSERT INTO salas (sala, disponivel, capasidade) VALUES ('sala 9', TRUE, 71);
-INSERT INTO salas (sala, disponivel, capasidade) VALUES ('lab 2', TRUE, 39);
-INSERT INTO salas (sala, disponivel, capasidade) VALUES ('sala 5', TRUE, 54);
-INSERT INTO salas (sala, disponivel, capasidade) VALUES ('lab 5', FALSE, 33);
-INSERT INTO salas (sala, disponivel, capasidade) VALUES ('sala 6', TRUE, 93);
-INSERT INTO salas (sala, disponivel, capasidade) VALUES ('lab 12', FALSE, 27);
-INSERT INTO salas (sala, disponivel, capasidade) VALUES ('lab 13', TRUE, 37);
-INSERT INTO salas (sala, disponivel, capasidade) VALUES ('sala 12', TRUE, 89);
-INSERT INTO salas (sala, disponivel, capasidade) VALUES ('sala 2', FALSE, 89);
+INSERT INTO salas (sala, disponivel, capacidade) VALUES ('lab 3', TRUE, 11);
+INSERT INTO salas (sala, disponivel, capacidade) VALUES ('sala 9', TRUE, 71);
+INSERT INTO salas (sala, disponivel, capacidade) VALUES ('lab 2', TRUE, 39);
+INSERT INTO salas (sala, disponivel, capacidade) VALUES ('sala 5', TRUE, 54);
+INSERT INTO salas (sala, disponivel, capacidade) VALUES ('lab 5', FALSE, 33);
+INSERT INTO salas (sala, disponivel, capacidade) VALUES ('sala 6', TRUE, 93);
+INSERT INTO salas (sala, disponivel, capacidade) VALUES ('lab 12', FALSE, 27);
+INSERT INTO salas (sala, disponivel, capacidade) VALUES ('lab 13', TRUE, 37);
+INSERT INTO salas (sala, disponivel, capacidade) VALUES ('sala 12', TRUE, 89);
+INSERT INTO salas (sala, disponivel, capacidade) VALUES ('sala 2', FALSE, 89);
 
 INSERT INTO disciplina (materia, professor, qtdAulas, faltas) VALUES ('História', 'Moisa', 61, 9);
 INSERT INTO disciplina (materia, professor, qtdAulas, faltas) VALUES ('Biologia', 'Gilney', 63, 14);
