@@ -1,0 +1,22 @@
+<div class="py-2">
+    <h2 class="fw-light mb-4">Lista de Horários</h2>
+
+    <table class="table table-hover">
+        <thead>
+            <tr class="text-secondary small text-uppercase">
+                <th>Horário</th>
+                <th>Disciplina</th>
+                <th class="text-end">Sala/Laboratório</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each horarios}}
+            <tr>
+                <td class="text-muted">{{horarios}}</td>
+                <td class="fw-semibold">{{disciplinas}}</td>
+                <td class="text-end text-muted">{{sala_lab}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
