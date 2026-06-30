@@ -9,6 +9,12 @@ const mysql =require('mysql2');
 
 const app = express();
 
+
+
+//pra receber os dados
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 //bootsrap
 app.use('/bootstrap',express.static('./node_modules/bootstrap/dist'));
 
@@ -35,7 +41,7 @@ conexao.connect(function(erro){
 });
 
 
-
+//salas
 app.get('/salas', function (req, res) {
   let sql = 'select * from salas';
 
@@ -48,8 +54,30 @@ app.get('/salas', function (req, res) {
 
 
 
+  
+//add uma sala
+
+app.post("/salas/add", (req, res) => {
+  const { sala, disponivel, capacidade } = req.body;
+  conexao.query(
+
+    "insert into salas (sala, disponivel, capasidade) values (?, ?, ?)",
+    [sala, disponivel === "on" ? 1 : 0, capacidade],
+    (erro) => {
+      if (erro) throw erro;
+      res.redirect("/salas");
+    }
+  );
+});
 
 
+
+
+
+
+
+
+//disciplinas
 app.get('/disciplinas', function (req, res) {
   let sql = 'select * from disciplina ';
 
@@ -63,6 +91,10 @@ app.get('/disciplinas', function (req, res) {
 
 
 
+
+
+
+//horarios
 app.get('/horarios', function (req, res) {
   let sql = 'select * from horarios ';
 
@@ -78,13 +110,6 @@ app.get('/horarios', function (req, res) {
 app.engine('handlebars', engine({
     defaultLayout: 'main'
 }));
-
-
-
-
-app.get('/', (req, res) => {
-  res.send('Testando o express!');
-});
 
 app.listen(
     3000, 
