@@ -41,10 +41,10 @@ INSERT INTO salas (sala, disponivel, capacidade) VALUES ('sala 2', FALSE, 89);
 
 INSERT INTO disciplina (materia, professor, qtdAulas, faltas) VALUES ('História', 'Moisa', 61, 9);
 INSERT INTO disciplina (materia, professor, qtdAulas, faltas) VALUES ('Biologia', 'Gilney', 63, 14);
-INSERT INTO disciplina (materia, professor, qtdAulas, faltas) VALUES ('Química', 'Aliyson', 43, 3);
+INSERT INTO disciplina (materia, professor, qtdAulas, faltas) VALUES ('Química', 'Alyson', 43, 3);
 INSERT INTO disciplina (materia, professor, qtdAulas, faltas) VALUES ('Português', 'Joseane', 72, 3);
 INSERT INTO disciplina (materia, professor, qtdAulas, faltas) VALUES ('Geografia', 'Emmanuele', 54, 3);
-INSERT INTO disciplina (materia, professor, qtdAulas, faltas) VALUES ('Matemática', 'Rojerio', 49, 13);
+INSERT INTO disciplina (materia, professor, qtdAulas, faltas) VALUES ('Matemática', 'Rogerio', 49, 13);
 INSERT INTO disciplina (materia, professor, qtdAulas, faltas) VALUES ('Programação', 'Havana', 62, 6);
 INSERT INTO disciplina (materia, professor, qtdAulas, faltas) VALUES ('Projeto e Prática', 'Havana', 63, 12);
 INSERT INTO disciplina (materia, professor, qtdAulas, faltas) VALUES ('Banco de Dados', 'Carol', 59, 0);
