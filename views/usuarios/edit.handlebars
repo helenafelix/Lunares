@@ -1,0 +1,42 @@
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card card-edit shadow">
+            <div class="card-header-edit">
+                <h4 class="mb-0">Editar Cadastro: {{usuario.nome}}</h4>
+            </div>
+            <div class="card-body p-4">
+                <form action="/usuarios/atualizar/{{usuario.id}}" method="POST">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label fw-bold">Nome Completo</label>
+                        <input type="text" class="form-control input-edit" id="nome" name="nome" value="{{usuario.nome}}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label fw-bold">E-mail</label>
+                        <input type="email" class="form-control input-edit" id="email" name="email" value="{{usuario.email}}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="matricula" class="form-label fw-bold">Matrícula</label>
+                        <input type="text" class="form-control input-edit" id="matricula" name="matricula" value="{{usuario.matricula}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="senha" class="form-label fw-bold">Alterar Senha <small class="text-muted">(opcional)</small></label>
+                        <input type="password" class="form-control input-edit" id="senha" name="senha" placeholder="Digite apenas se quiser mudar">
+                    </div>
+                    <div class="mb-3">
+                        <label for="perfil" class="form-label fw-bold">Perfil</label>
+                        <select class="form-select input-edit" id="perfil" name="perfil" required>
+                            <option value="Aluno/Discente" {{#if (eq usuario.perfil 'Aluno/Discente')}}selected{{/if}}>Aluno/Discente</option>
+                            <option value="Professor/Docente" {{#if (eq usuario.perfil 'Professor/Docente')}}selected{{/if}}>Professor/Docente</option>
+                            <option value="Admin/Gestão" {{#if (eq usuario.perfil 'Admin/Gestão')}}selected{{/if}}>Admin/Gestão</option>
+                        </select>
+                    </div>
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-primary btn-update">Atualizar Dados</button>
+                        <a href="/usuarios" class="btn btn-outline-secondary btn-update">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

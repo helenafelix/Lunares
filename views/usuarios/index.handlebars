@@ -1,0 +1,36 @@
+
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="page-title">Usuários</h2>
+    <a href="/usuarios/novo" class="btn btn-primary btn-add">Adicionar Novo</a>
+</div>
+
+<div class="table-container">
+    <table class="table table-hover">
+        <thead class="table-light">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Matrícula</th>
+                <th>Perfil</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each usuarios}}
+            <tr>
+                <td>{{id}}</td>
+                <td><strong>{{nome}}</strong></td>
+                <td>{{email}}</td>
+                <td>{{#if matricula}}{{matricula}}{{else}}---{{/if}}</td>
+                <td><span class="badge bg-info text-dark badge-perfil">{{perfil}}</span></td>
+                <td>
+                    <a href="/usuarios/editar/{{id}}" class="btn btn-sm btn-outline-warning">Editar</a>
+                    <a href="/usuarios/deletar/{{id}}" class="btn btn-sm btn-outline-danger" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
