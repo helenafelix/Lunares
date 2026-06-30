@@ -1,0 +1,42 @@
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card card-custom shadow-lg">
+            <div class="card-header-custom">
+                <h4 class="mb-0">Cadastrar Novo Usuário</h4>
+            </div>
+            <div class="card-body p-4">
+                <form action="/usuarios/salvar" method="POST">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome Completo</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Ex: Helena Felix" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail Institucional</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="exemplo@ifpe.edu.br" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="matricula" class="form-label">Matrícula</label>
+                        <input type="text" class="form-control" id="matricula" name="matricula" placeholder="20251TDS...">
+                    </div>
+                    <div class="mb-3">
+                        <label for="senha" class="form-label">Senha de Acesso</label>
+                        <input type="password" class="form-control" id="senha" name="senha" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="perfil" class="form-label">Perfil do Usuário</label>
+                        <select class="form-select form-control" id="perfil" name="perfil" required>
+                            <option value="Aluno/Discente">Aluno/Discente</option>
+                            <option value="Professor/Docente">Professor/Docente</option>
+                            <option value="Admin/Gestão">Admin/Gestão</option>
+                        </select>
+                    </div>
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-success btn-save">Salvar Usuário</button>
+                        <a href="/usuarios" class="btn btn-link text-secondary text-center">Voltar para a lista</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
