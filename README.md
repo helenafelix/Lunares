@@ -37,3 +37,4 @@ ampliar o tempo de intervalo, investir na manutenção e
 melhoria dos equipamentos e mobiliário, além de criar
 sistemas ou recursos que facilitem o acesso às
 informações de horários e locais das aulas.
+
