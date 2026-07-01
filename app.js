@@ -130,7 +130,7 @@ app.post("/salas/add", (req, res) => {
 
 
 
-
+//fany
 //disciplinas
 app.get('/disciplinas', function (req, res) {
   let sql = 'select * from disciplina ';
@@ -147,7 +147,7 @@ app.get('/disciplinas', function (req, res) {
 
 
 
-
+//fany
 //horarios
 app.get('/horarios', function (req, res) {
   let sql = 'select * from horarios ';
