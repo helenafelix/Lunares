@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <div class="border-bottom pb-3 mb-4">
+        <h2 class="h4">Cadastrar Nova Disciplina</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <form action="/disciplinas/add" method="POST" class="bg-light p-4 rounded shadow-sm">
+                <div class="mb-3">
+                    <label class="form-label">Nome da Matéria</label>
+                    <input type="text" name="materia" class="form-control" placeholder="Ex: Matemática" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Professor</label>
+                    <input type="text" name="professor" class="form-control" placeholder="Nome do Professor" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Quantidade de Aulas</label>
+                    <input type="number" name="qtdAulas" class="form-control" value="0" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Faltas</label>
+                    <input type="number" name="faltas" class="form-control" value="0">
+                </div>
+                <div class="d-flex align-items-center">
+                    <button type="submit" class="btn btn-primary me-3">Salvar Disciplina</button>
+                    <a href="/disciplinas" class="text-decoration-none text-muted">Cancelar e Voltar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

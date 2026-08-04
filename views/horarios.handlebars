@@ -1,12 +1,15 @@
-<div class="py-2">
-    <h2 class="fw-light mb-4">Lista de Horários</h2>
-
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-light">Lista de Horários</h2>
+        <a href="/horarios/novo" class="btn btn-success btn-sm">Novo Horário</a>
+    </div>
     <table class="table table-hover">
         <thead>
             <tr class="text-secondary small text-uppercase">
                 <th>Horário</th>
                 <th>Disciplina</th>
-                <th class="text-end">Sala/Laboratório</th>
+                <th>Sala/Laboratório</th>
+                <th class="text-center">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -14,7 +17,11 @@
             <tr>
                 <td class="text-muted">{{horarios}}</td>
                 <td class="fw-semibold">{{disciplinas}}</td>
-                <td class="text-end text-muted">{{sala_lab}}</td>
+                <td>{{sala_lab}}</td>
+                <td class="text-center">
+                    <a href="/horarios/editar/{{id_horario}}" class="btn btn-outline-primary btn-sm me-1">Editar</a>
+                    <a href="/horarios/deletar/{{id_horario}}" class="btn btn-outline-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir este horário?')">Excluir</a>
+                </td>
             </tr>
             {{/each}}
         </tbody>
