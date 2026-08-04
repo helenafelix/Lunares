@@ -37,3 +37,8 @@ ampliar o tempo de intervalo, investir na manutenção e
 melhoria dos equipamentos e mobiliário, além de criar
 sistemas ou recursos que facilitem o acesso às
 informações de horários e locais das aulas.
+
+* Como Rodar o Projeto
+1. Instale as dependências: `npm install`.
+2. Inicie o servidor: `node --watch app.js`.
+3. Acesse em seu navegador: `http://localhost:3000`.

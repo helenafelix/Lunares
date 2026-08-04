@@ -1,8 +1,8 @@
-
-<div class="py-2">
-    <h2 class="fw-light mb-4">Lista de disciplinas</h2>
-
-
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-light">Lista de Disciplinas</h2>
+        <a href="/disciplinas/novo" class="btn btn-success btn-sm">Nova Disciplina</a>
+    </div>
     <table class="table table-hover">
         <thead>
             <tr class="text-secondary small text-uppercase">
@@ -10,7 +10,8 @@
                 <th>Matéria</th>
                 <th>Professor</th>
                 <th>Qtd. Aulas</th>
-                <th class="text-end">Faltas</th>
+                <th>Faltas</th>
+                <th class="text-center">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -20,7 +21,11 @@
                 <td class="fw-semibold">{{materia}}</td>
                 <td>{{professor}}</td>
                 <td>{{qtdAulas}}</td>
-                <td class="text-end text-muted">{{faltas}}</td>
+                <td>{{faltas}}</td>
+                <td class="text-center">
+                    <a href="/disciplinas/editar/{{codigo}}" class="btn btn-outline-primary btn-sm me-1">Editar</a>
+                    <a href="/disciplinas/deletar/{{codigo}}" class="btn btn-outline-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir esta disciplina?')">Excluir</a>
+                </td>
             </tr>
             {{/each}}
         </tbody>
