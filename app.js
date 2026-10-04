@@ -271,11 +271,6 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-const PORT = process.env.PORT || 3000;
-
-
-
-
 
 
 
@@ -294,7 +289,8 @@ async function initDB() {
             await sequelize.query("INSERT INTO horarios (horarios, disciplinas, sala_lab) VALUES ('07:00', 'História', 'Sala 9')");
         }
         console.log('Banco de Dados SQLite inicializado.');
-        app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`));
+        app.listen(3000,
+            () => console.log(`http://localhost:3000`));
     } catch (error) {
         console.error('Erro ao inicializar o banco:', error);
     }
